@@ -4,15 +4,15 @@
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
 <details>
-    <summary>Изображения</summary>
+<summary>Изображения</summary>
 
-    [![Меню банка][1]][1]
-    [1]: images/enki_bank.png
+[![Меню банка][1]][1]
+[1]: images/enki_bank.png
     
-    <img src="images/enki_bank.png" />
-    <img src="images/enki_donate.png" />
-    <img src="images/enki_googleauth.png" />
-    <img src="images/enki_phone.png" />
-    <img src="images/enki_registration.png" />
-    <img src="images/enki_admin.png" />
+<img src="images/enki_bank.png" />
+<img src="images/enki_donate.png" />
+<img src="images/enki_googleauth.png" />
+<img src="images/enki_phone.png" />
+<img src="images/enki_registration.png" />
+<img src="images/enki_admin.png" />
 </details>
