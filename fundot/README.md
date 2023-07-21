@@ -435,7 +435,7 @@ function AccountPageHome({ account }) {
 <details>
 <summary>Пример кода NestJS</summary>
 
-```javascript
+```typescript
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { Response, Request } from 'express';
 import { InjectRepository } from '@nestjs/typeorm';
