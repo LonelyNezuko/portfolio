@@ -11,9 +11,9 @@
 <img src="images/googleauth.png" />
 <img src="images/phone.png" />
 <img src="images/registration.png" />
-<img src="images/inventory.png" />
-<img src="images/inventory2.png" />
-<img src="images/inventory3.png" />
+<img src="images/inventory.jpg" />
+<img src="images/inventory2.jpg" />
+<img src="images/inventory3.jpg" />
 </details>
 
 <details>
