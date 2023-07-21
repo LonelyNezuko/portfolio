@@ -1,4 +1,4 @@
-# FunDot
+# LK for ENKI ONLINE
 Личный кабинет для SA:MP проекта ENKI ONLINE
 
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
