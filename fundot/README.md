@@ -571,3 +571,496 @@ export class UserSigninService {
 }
 ```
 </details>
+
+<details>
+<summary>Пример кода SASS (SCSS)</summary>
+    
+```scss
+@import '../../rules/scss/variables.scss';
+
+#accountLandingBodyStats {
+    & .home {
+        & .stats {
+            & .title {
+                & h2 {
+                    width: 220px;
+                    height: 25px;
+
+                    background-color: $themeBlack_background;
+                    border-radius: $borderRadius;
+                }
+                & span {
+                    width: 100px;
+                    height: 17px;
+
+                    display: block;
+
+                    background-color: $themeBlack_background;
+                    border-radius: $borderRadius;
+                }
+            }
+        }
+    }
+}
+#accountLandingHeader {
+    & header {
+        & .accountAvatar {
+            & .landingAvatar {
+                width: 160px;
+                height: 160px;
+    
+                background-color: $themeBlack_background;
+                border-radius: 50%;
+            }
+            & .title {
+                & h1 {
+                    width: 140px;
+                    height: 27px;
+
+                    background-color: $themeBlack_background;
+                    border-radius: $borderRadius;
+                }
+                & h2 {
+                    width: 100px;
+                    height: 15px;
+
+                    background-color: $themeBlack_background;
+                    border-radius: $borderRadius / 1.5;
+                }
+            }
+        }
+        & .nav {
+            & .item {
+                width: 130px;
+
+                background-color: $themeBlack_background;
+                border-radius: $borderRadius;
+            }
+        }
+    }
+}
+#account {
+    & .header {
+        position: relative;
+        height: 390px;
+
+        border-radius: $borderRadius * 2;
+        overflow: hidden;
+
+        display: flex;
+        align-items: flex-end;
+
+        & .wrapper {
+            position: relative;
+            z-index: $zindex_wrapper;
+
+            padding: $padding * 3 $padding * 7;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            width: 100%;
+        }
+
+        & .bg {
+            position: absolute;
+            z-index: $zindex_hover;
+
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            height: 22%;
+
+            background-color: $themeBlack_domBackgroundOther;
+            box-shadow: 0 -80px 35px 34px $themeBlack_domBackgroundOther;
+        }
+        & .accountBG {
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+
+            top: -22%;
+            left: 0;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        & .accountAvatar {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            width: 100%;
+            .wrap {
+                width: 100%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin-top: $margin * 2;
+                position: relative;
+
+                // transform: translateX($margin * 4);
+
+                & .title {
+                    & h1 {
+                        font-size: $fontsize + 12px;
+                        font-weight: bold;
+        
+                        display: flex;
+                        align-items: center;
+        
+                        & .verified {
+                            margin-left: $margin * 2;
+        
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                    & h2 {
+                        margin-top: $margin;
+                        opacity: .8;
+                    }
+                }
+                & .manage {
+                    margin-left: $margin * 4;
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+
+                        display: block;
+                        content: "";
+
+                        width: 6px;
+                        height: 100%;
+
+                        left: 0;
+                        top: 0;
+
+                        background-color: transparent;
+                        transform: translateX(-100%);
+                    }
+                    &:hover .menu {
+                        z-index: $zindex_hover;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .menu {
+                        position: absolute;
+
+                        right: $margin * 9;
+                        top: 0;
+
+                        z-index: -1;
+                        opacity: 0;
+                        visibility: hidden;
+
+                        background-color: $themeBlack_color;
+                        border-radius: $borderRadius;
+
+                        transition: $transition;
+        
+                        & .btn {
+                            padding: $padding * 2;
+                            width: 100%;
+
+                            position: relative;
+                            z-index: $zindex_hoverModal;
+
+                            &:hover {
+                                background-color: $themeBlack_colorHover;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .avatar {
+                border: $padding * 1.2 solid $themeBlack_domBackgroundOther;   
+
+                & .accountAvatarHover {
+                    // &:hover {
+                    //     opacity: 1;
+                    // }
+                    // opacity: 0;
+                    
+                    z-index: $zindex_hover;
+                    position: absolute;
+
+                    width: 100%;
+                    height: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    // background-color: #0A1F3250;
+                    // backdrop-filter: blur(2px);
+                    // border-radius: 50%;
+
+                    & svg {
+                        font-size: $fontsize + 22px;
+                        transition: $transition;
+                    }
+
+                    transition: $transition;
+                }
+            }
+        }
+
+        & .nav {
+            margin-top: $margin * 6;
+
+            display: flex;
+            align-items: center;
+            gap: $margin;
+
+            & .item {
+                text-transform: uppercase;
+                transition: $transition;
+
+                display: flex;
+                align-items: center;
+
+                padding: $padding * 2 $padding * 4;
+                border-radius: $borderRadius - 2px;
+
+                height: 40px;
+                
+                &.selected:not(.blocked):not(.landingAnimate),
+                &:hover:not(.blocked):not(.landingAnimate) {
+                    background-color: $themeBlack_color;
+                    color: $themeBlack_textColor;
+
+                    & h4 {
+                        opacity: 1;
+                    }
+                }
+
+                & svg {
+                    margin-right: $margin * 2;
+                    transition: $transition;
+                }
+                & h4 {
+                    margin-left: $margin * 2;
+
+                    background-color: $themeBlack_disable;
+                    color: black;
+
+                    padding: $padding $padding * 1.5;
+                    transition: $transition;
+
+                    border-radius: $borderRadius - 2px;
+                    opacity: .4;
+                }
+
+                &.blocked {
+                    opacity: .4;
+                }
+
+                &.stream {
+                    &:before {
+                        display: block;
+                        content: "OFFLINE";
+
+                        margin-right: $margin * 2;
+
+                        background-color: $themeBlack_disable;
+                        color: black;
+
+                        padding: $padding $padding * 1.5;
+                        transition: $transition;
+
+                        border-radius: $borderRadius - 2px;
+                    }
+
+                    .live {
+                        &:hover,
+                        &.selected {
+                            &:before {
+                                color: $themeBlack_color;
+                                background-color: white;
+                            }
+                        }
+                        &:before {
+                            content: "LIVE";
+
+                            background-color: #ef4243;
+                            color: white;
+
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    & .accountBlocked {
+        margin-top: $margin * 12;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & .wrap {
+            opacity: .8;
+            & svg {
+                display: block;
+                margin: 0 auto;
+
+                font-size: $fontsize + 62px;
+            }
+            & h1 {
+                margin-top: $margin * 2;
+                font-size: $fontsize + 4px;
+            }
+            & button {
+                margin: 0 auto;
+                margin-top: $margin * 8;
+            }
+        }
+    }
+
+    & .home {
+        width: 100%;
+        margin-top: $margin * 6;
+
+        display: flex;
+        align-items: flex-start;
+
+        & .section {
+            width: 100%;
+
+            &:last-child {
+                width: auto;
+                height: 100%;
+            }
+            &:first-child {
+                margin-right: $margin * 3;
+            }
+        }
+
+        & .element {
+            & header {
+                font-size: $fontsize + 13px;
+                font-weight: bold;
+            }
+
+
+
+            &.news {
+                & .list {
+                    overflow: visible;
+                    & .item {
+                        & .header {
+                            height: auto;
+                            align-items: center;
+                            overflow: visible;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        & .stats {
+            margin-top: $margin * 4;
+            padding: $padding * 3;
+
+            background-color: $themeBlack_domBackgroundOther;
+            border-radius: $borderRadius;
+
+            & .title {
+                font-size: $fontsize + 8px;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & a {
+                    font-size: $fontsize - 3px;
+                    opacity: .4;
+                }
+            }
+            & .wrap {
+                margin-top: $margin * 3;
+
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+
+                & .about {
+                    min-width: 45%;
+
+                    background-color: $themeBlack_background;
+                    border-radius: $borderRadius;
+
+                    padding: $padding * 2;
+                    
+                    & div {
+                        margin-top: $margin * 2;
+                        height: 106px;
+
+                        font-size: $fontsize - 2px;
+                        opacity: .8;
+                    }
+                }
+                & .main {
+                    width: 100%;
+                    margin-left: $margin * 3;
+
+                    & section + section {
+                        margin-top: $margin * 2;
+                    }
+                    & section {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        height: 30px;
+
+                        background-color: $themeBlack_background;
+                        border-radius: $borderRadius / 1.5;
+
+                        padding: $padding * 2;
+
+                        & h1 {
+
+                        }
+                        & span {
+                            display: flex;
+                            align-items: center;
+                            text-align: right;
+
+                            & img {
+                                margin-right: $margin;
+                            }
+                        }
+
+                        &.social {
+                            & span {
+                                & div {
+                                    opacity: .1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+</details>
