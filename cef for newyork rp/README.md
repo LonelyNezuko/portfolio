@@ -19,6 +19,7 @@
 <img src="images/shop.png" />
 </details>
 
+<details>
 <summary>Пример кода</summary>
     
 ```javascript
