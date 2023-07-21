@@ -1,5 +1,5 @@
 # FunDot
-Сайт для SA:MP проекта ENKI ONLINE: www.enki-rp.ru
+Сайт для SA:MP проекта ENKI ONLINE: <a href="www.enki-rp.ru" target="_blank"></a>
 
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![Pug](https://img.shields.io/badge/Pug-FFF?style=for-the-badge&logo=pug&logoColor=A86454)
