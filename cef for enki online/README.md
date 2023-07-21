@@ -6,10 +6,13 @@
 <details>
     <summary>Изображения</summary>
 
-    <img src="/images/enki_bank.png" />
-    <img src="/images/enki_donate.png" />
-    <img src="/images/enki_googleauth.png" />
-    <img src="/images/enki_phone.png" />
-    <img src="/images/enki_registration.png" />
-    <img src="/images/enki_admin.png" />
+    [![Меню банка][1]][1]
+    [1]: images/enki_bank.png
+    
+    <img src="images/enki_bank.png" />
+    <img src="images/enki_donate.png" />
+    <img src="images/enki_googleauth.png" />
+    <img src="images/enki_phone.png" />
+    <img src="images/enki_registration.png" />
+    <img src="images/enki_admin.png" />
 </details>
